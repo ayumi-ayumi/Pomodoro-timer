@@ -1,0 +1,43 @@
+.setting {
+  display: flex;
+}
+
+.buttons  ul {
+  display: flex;
+  li {
+    margin-right: 10px;
+    button {
+      color: red;
+    }
+  }
+}
+
+.showTimer  ul{
+  display: flex;
+}
+
+
+
+.setTimerMins {
+  /* border: 1px solid red; */
+  font-size: 30px;
+  height: 30px;
+  width: 100px;
+
+
+
+
+  
+}
+
+.recordMins {
+  font-size: 30px;
+  height: 30px;
+  width: 50px;
+  border: 1px solid black;
+}
+
+ul {
+  list-style: none;
+}
+

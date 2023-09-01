@@ -5,6 +5,7 @@ let stopButton = document.getElementById('stopButton')
 let resetButton = document.getElementById('resetButton')
 let showTimer = document.getElementById('showTimer')
 let countdownSeconds = document.getElementById('countdownSeconds')
+let recordMins = document.getElementById('recordMins')
 
 // let timeLeft;
 // let startedTime = Date.now()
@@ -27,23 +28,25 @@ let timerID;
 
 
 // }
-let timerMinsToMilli = 900
+let timerMinsToMilli = 2
 let m = 0;
 let s = 0; 
+let count = 0;
 
 function start() {
   timerID = setInterval(countDown,1000);
 }
 
 function countDown() {
-  // console.log(timerMinsToMilli)
+  if (timerMinsToMilli === 0 ) {
+    count ++;
+    recordMins.innerHTML = count;
+    reset()
+  }
   timerMinsToMilli --;
   m = parseInt(timerMinsToMilli / 60)
   s = timerMinsToMilli % 60
-  // console.log(timerMinsToMilli)
   showTimer.innerHTML = ("0" + m).slice(-2) +"：" + ("0" + s).slice(-2);
-  // showTimer.innerHTML = m + ":" + s;
-  // console.log(timerMinsToMilli)
 }
  
 // function countdown () {
@@ -84,10 +87,10 @@ function stop () {
 stopButton.addEventListener('click', stop)
 
 function reset() {
-  timerMinsToMilli = 180;
+  timerMinsToMilli = 2;
   m = parseInt(timerMinsToMilli / 60);
   s = timerMinsToMilli % 60;
-  showTimer.innerHTML = ("0"+min).slice(-2) +"：" + ("0"+sec).slice(-2);
+  showTimer.innerHTML = ("0" + m).slice(-2) +"：" + ("0" + s).slice(-2);
 }
 resetButton.addEventListener('click', reset)
 // let timerMins = document.getElementById('setTimerMins')

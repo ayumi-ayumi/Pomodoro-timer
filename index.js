@@ -50,6 +50,7 @@ function reset() {
 }
 
 function playaudio(){
+  audio.load();
   audio.play();
 }
 

@@ -6,6 +6,10 @@ ul {
   list-style: none;
 }
 
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
 .buttons div {
   display: inline-block;
   position: relative;
@@ -20,6 +24,12 @@ ul {
   font-size: 18px;
   background-color: rgb(169, 214, 169);
   margin: 30px;
+}
+@media screen and (max-width: 767px) {
+  .buttons div button {
+    margin: 10px;
+    width: 80px;
+  }
 }
 .buttons div button:hover {
   background-color: rgb(191, 215, 191);
@@ -36,6 +46,13 @@ ul {
   font-size: 100px;
   font-weight: 800;
   margin: 100px;
+}
+@media screen and (max-width: 767px) {
+  #showTimer {
+    font-size: 80px;
+    font-weight: 500;
+    margin: 60px;
+  }
 }
 
 .records {

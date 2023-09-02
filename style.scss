@@ -1,3 +1,5 @@
+@use "mixin" as m;
+
 * {
   font-family: "Chakra Petch", sans-serif;
 }
@@ -6,37 +8,50 @@ ul {
   list-style: none;
 }
 
-.buttons div {
-  display: inline-block;
-  position: relative;
-  
-  button {
-    height: 30px;
-    line-height: 30px;
-    width: 100px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 18px;
-    background-color: rgb(169, 214, 169);
-    margin: 30px;
-  }
-  button:hover {
-    background-color: rgb(191, 215, 191);
-    opacity: 0.8;
-    transition: 0.3s;
-  }
-  button:active {
-    translate: 2px 2px;
-    box-shadow: 2px 2px 2px gray;
-    transition: 0.1s;
-  }
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  div {
+   display: inline-block;
+   position: relative;
+   
+   button {
+     height: 30px;
+     line-height: 30px;
+     width: 100px;
+     text-align: center;
+     cursor: pointer;
+     border-radius: 4px;
+     font-size: 18px;
+     background-color: rgb(169, 214, 169);
+     margin: 30px;
+     @include m.mq(sp) {
+       margin: 10px;
+       width: 80px;
+     }
+   }
+   button:hover {
+     background-color: rgb(191, 215, 191);
+     opacity: 0.8;
+     transition: 0.3s;
+   }
+   button:active {
+     translate: 2px 2px;
+     box-shadow: 2px 2px 2px gray;
+     transition: 0.1s;
+   }
+ }
 }
 
 #showTimer {
   font-size: 100px;
   font-weight: 800;
   margin: 100px;
+  @include m.mq(sp) {
+    font-size: 80px;
+    font-weight: 500;
+    margin: 60px;
+  }
 }
 
 .records {

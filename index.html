@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   <div class="setting">
-    <div>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap"
+      rel="stylesheet">
+  </head>
+  <body>
+    <div class="setting">
+      <!-- <div>
       <div><span><input type="text" id="setTimerMins"></span>mins</div>
+    </div> -->
+      <div class="buttons">
+        <div><button id="startButton">START</button></div>
+        <div><button id="stopButton">STOP</button></div>
+        <div><button id="resetButton">RESET</button></div>
+      </div>
     </div>
-    <div class="buttons">
-      <ul>
-        <li><button id="startButton">START</button></li>
-        <li><button id="stopButton">STOP</button></li>
-        <li><button id="resetButton">RESET</button></li>
-      </ul>
-    </div>
-   </div>
 
-   <div id="showTimer">
-    15 : 00
-    <!-- <ul>
+    <div id="showTimer">
+      15 : 00
+      <!-- <ul>
       <li><span id="countdownMins"></span>mins</li>
       <li><span id="countdownSeconds"></span>seconds</li>
     </ul> -->
-   </div>
+    </div>
 
-   <h2>Record</h2>
-   <div>
-    <ul>
-      <li>
-        <div>
-          <span id="times"></span>
-          <span id="recordMins"></span>
-          <span id="totalMins"></span>
-        </div>
-      </li>
-      <!-- <li>
+    <h2>Record</h2>
+    <div>
+      <ul>
+        <li>
+          <div class="records">
+            <span id="times"></span>
+            <span id="recordMins"></span>
+            <span id="totalMins"></span>
+          </div>
+        </li>
+        <!-- <li>
         <div>
           <span class="recordMins">12</span>
           *
@@ -59,10 +62,11 @@
           mins
         </div>
       </li> -->
-    </ul>
-    <!-- <div>TOTAL<span>total mins</span>mins</div> -->
-   </div>
+      </ul>
+      <!-- <div>TOTAL<span>total mins</span>mins</div> -->
+    </div>
+    <audio src="alarm.mp3" loop id="audio">現環境では終了時にアラームが鳴りません</audio>
 
-   <script src="index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>

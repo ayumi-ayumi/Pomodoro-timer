@@ -1,26 +1,65 @@
-.setting {
-  display: flex;
+* {
+  font-family: "Chakra Petch", sans-serif;
 }
 
-.buttons ul {
-  display: flex;
-}
-.buttons ul li {
-  margin-right: 10px;
-}
-.buttons ul li button {
-  color: red;
+ul {
+  list-style: none;
 }
 
-.showTimer ul {
-  display: flex;
+.buttons div {
+  display: inline-block;
+  position: relative;
 }
-
-.setTimerMins {
-  /* border: 1px solid red; */
-  font-size: 30px;
+.buttons div button {
   height: 30px;
+  line-height: 30px;
   width: 100px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 18px;
+  background-color: rgb(169, 214, 169);
+  margin: 30px;
+}
+.buttons div button:hover {
+  background-color: rgb(191, 215, 191);
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.buttons div button:active {
+  translate: 2px 2px;
+  box-shadow: 2px 2px 2px gray;
+  transition: 0.1s;
+}
+
+#showTimer {
+  font-size: 100px;
+  font-weight: 800;
+  margin: 100px;
+}
+
+.records {
+  display: flex;
+  font-size: 30px;
+  height: 50px;
+}
+.records #times {
+  display: inline-block;
+  width: 50px;
+  text-decoration: underline;
+  margin-right: 20px;
+}
+.records #recordMins {
+  display: inline-block;
+  width: 150px;
+  text-decoration: underline;
+  margin-right: 20px;
+}
+.records #totalMins {
+  display: inline-block;
+  width: 250px;
+  text-decoration: underline;
+  margin-right: 20px;
 }
 
 .recordMins {
@@ -28,8 +67,4 @@
   height: 30px;
   width: 50px;
   border: 1px solid black;
-}
-
-ul {
-  list-style: none;
 }/*# sourceMappingURL=style.css.map */

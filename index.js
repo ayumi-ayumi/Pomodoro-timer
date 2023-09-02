@@ -7,6 +7,7 @@ let countdownSeconds = document.getElementById('countdownSeconds')
 let times = document.getElementById('times')
 let recordMins = document.getElementById('recordMins')
 let totalMins = document.getElementById('totalMins')
+let audio = document.getElementById('audio')
 
 let timerID;
 let timerMinToSec = 4;
@@ -14,15 +15,15 @@ let m = 0;
 let s = 0; 
 let count = 0;
 
-
 function countDown() {
   if (timerMinToSec === 0 ) {
     count ++;
-    times.innerHTML = count + "*";
+    times.innerHTML = count + "   *";
     stop()
+    playaudio();
     timerMinToSec = 4
-    recordMins.innerHTML = timerMinToSec + "mins"
-    totalMins.innerHTML = "Total " + timerMinToSec * count + "mins"
+    recordMins.innerHTML = timerMinToSec + " mins"
+    totalMins.innerHTML = "Total " + timerMinToSec * count + " mins"
   }
   m = parseInt(timerMinToSec / 60)
   s = timerMinToSec % 60
@@ -36,6 +37,7 @@ function start() {
 }
 
 function stop () {
+  stopaudio();
   clearInterval(timerID);
   timerID = null;
 }
@@ -45,6 +47,14 @@ function reset() {
   timerMinToSec = 4;
   s = timerMinToSec % 60;
   showTimer.innerHTML = ("0" + m).slice(-2) +"：" + ("0" + s).slice(-2);
+}
+
+function playaudio(){
+  audio.play();
+}
+
+function stopaudio(){
+  audio.pause();
 }
 
 startButton.addEventListener('click', start)

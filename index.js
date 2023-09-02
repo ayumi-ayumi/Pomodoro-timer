@@ -10,7 +10,7 @@ let totalMins = document.getElementById('totalMins')
 let audio = document.getElementById('audio')
 
 let timerID;
-let timerMinToSec = 4;
+let timerMinToSec = 900;
 let m = 0;
 let s = 0; 
 let count = 0;
@@ -21,7 +21,7 @@ function countDown() {
     times.innerHTML = count + "   *";
     stop()
     playaudio();
-    timerMinToSec = 4
+    timerMinToSec = 900
     recordMins.innerHTML = timerMinToSec + " mins"
     totalMins.innerHTML = "Total " + timerMinToSec * count + " mins"
   }
@@ -44,7 +44,7 @@ function stop () {
 
 function reset() {
   m = parseInt(timerMinToSec / 60);
-  timerMinToSec = 4;
+  timerMinToSec = 900;
   s = timerMinToSec % 60;
   showTimer.innerHTML = ("0" + m).slice(-2) +"：" + ("0" + s).slice(-2);
 }

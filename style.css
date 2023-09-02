@@ -24,6 +24,7 @@ ul {
   font-size: 18px;
   background-color: rgb(169, 214, 169);
   margin: 30px;
+  border: 1px solid gray;
 }
 @media screen and (max-width: 767px) {
   .buttons div button {
@@ -38,7 +39,7 @@ ul {
 }
 .buttons div button:active {
   translate: 2px 2px;
-  box-shadow: 2px 2px 2px gray;
+  box-shadow: 2px 2px 0 rgb(63, 62, 62);
   transition: 0.1s;
 }
 

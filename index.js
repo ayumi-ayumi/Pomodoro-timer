@@ -22,7 +22,7 @@ function countDown() {
     stop()
     playaudio();
     timerMinToSec = 900
-    recordMins.innerHTML = timerMinToSec + " mins"
+    recordMins.innerHTML = timerMinToSec/60 + " mins"
     totalMins.innerHTML = "Total " + 15 * count + " mins"
   }
   m = parseInt(timerMinToSec / 60)

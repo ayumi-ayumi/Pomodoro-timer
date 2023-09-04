@@ -2,6 +2,16 @@
   font-family: "Chakra Petch", sans-serif;
 }
 
+body {
+  width: 30%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  body {
+    width: 90%;
+  }
+}
+
 ul {
   list-style: none;
 }
@@ -46,43 +56,44 @@ ul {
 #showTimer {
   font-size: 100px;
   font-weight: 800;
-  margin: 100px;
+  margin: 20px;
+  text-align: center;
 }
 @media screen and (max-width: 767px) {
   #showTimer {
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 500;
-    margin: 60px;
+    margin: 5px;
   }
 }
 
 .records {
-  display: flex;
-  font-size: 30px;
-  height: 50px;
+  font-size: 25px;
 }
-.records #times {
-  display: inline-block;
-  width: 50px;
-  text-decoration: underline;
-  margin-right: 20px;
+.records ul {
+  margin: 0;
 }
-.records #recordMins {
+
+#times {
   display: inline-block;
-  width: 150px;
-  text-decoration: underline;
-  margin-right: 20px;
-}
-.records #totalMins {
-  display: inline-block;
-  width: 250px;
   text-decoration: underline;
   margin-right: 20px;
 }
 
-.recordMins {
-  font-size: 30px;
-  height: 30px;
-  width: 50px;
-  border: 1px solid black;
+#recordMins {
+  display: inline-block;
+  text-decoration: underline;
+  margin-right: 20px;
+}
+
+#totalMins {
+  display: inline-block;
+  text-decoration: underline;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  h2 {
+    margin: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

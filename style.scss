@@ -4,6 +4,14 @@
   font-family: "Chakra Petch", sans-serif;
 }
 
+body {
+  width: 30%;
+  margin: 0 auto;
+  @include m.mq(sp) {
+    width: 90%;
+  }
+}
+
 ul {
   list-style: none;
 }
@@ -12,76 +20,75 @@ ul {
   display: flex;
   justify-content: space-evenly;
   div {
-   display: inline-block;
-   position: relative;
-   
-   button {
-     height: 30px;
-     line-height: 30px;
-     width: 100px;
-     text-align: center;
-     cursor: pointer;
-     border-radius: 4px;
-     font-size: 18px;
-     background-color: rgb(169, 214, 169);
-     margin: 30px;
-     border: 1px solid gray;
-     @include m.mq(sp) {
-       margin: 10px;
-       width: 80px;
-     }
-   }
-   button:hover {
-     background-color: rgb(191, 215, 191);
-     opacity: 0.8;
-     transition: 0.3s;
-   }
-   button:active {
-     translate: 2px 2px;
-     box-shadow: 2px 2px 0 rgb(63, 62, 62);
-     transition: 0.1s;
-   }
- }
+    display: inline-block;
+    position: relative;
+
+    button {
+      height: 30px;
+      line-height: 30px;
+      width: 100px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 18px;
+      background-color: rgb(169, 214, 169);
+      margin: 30px;
+      border: 1px solid gray;
+      @include m.mq(sp) {
+        margin: 10px;
+        width: 80px;
+      }
+    }
+    button:hover {
+      background-color: rgb(191, 215, 191);
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+    button:active {
+      translate: 2px 2px;
+      box-shadow: 2px 2px 0 rgb(63, 62, 62);
+      transition: 0.1s;
+    }
+  }
 }
 
 #showTimer {
   font-size: 100px;
   font-weight: 800;
-  margin: 100px;
+  margin: 20px;
+  text-align: center;
   @include m.mq(sp) {
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 500;
-    margin: 60px;
+    margin: 5px;
   }
 }
 
 .records {
-  display: flex;
-  font-size: 30px;
-  height: 50px;
-  #times {
-    display: inline-block;
-    width: 50px;
-    text-decoration: underline;
-    margin-right: 20px;
-  }
-  #recordMins {
-    display: inline-block;
-    width: 150px;
-    text-decoration: underline;
-    margin-right: 20px;
-  }
-  #totalMins {
-    display: inline-block;
-    width: 250px;
-    text-decoration: underline;
-    margin-right: 20px;
+  font-size: 25px;
+  ul {
+    margin: 0;
   }
 }
 
-.recordMins {
-  font-size: 30px;
-  height: 30px;
-  width: 50px;
-  border: 1px solid black;
+#times {
+  display: inline-block;
+  text-decoration: underline;
+  margin-right: 20px;
+}
+#recordMins {
+  display: inline-block;
+  text-decoration: underline;
+  margin-right: 20px;
+}
+#totalMins {
+  display: inline-block;
+  text-decoration: underline;
+  margin-right: 20px;
+}
+
+h2 {
+  @include m.mq(sp) {
+    margin: 0;
+  }
 }

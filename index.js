@@ -23,7 +23,7 @@ function countDown() {
     playaudio();
     timerMinToSec = 900
     recordMins.innerHTML = timerMinToSec + " mins"
-    totalMins.innerHTML = "Total " + timerMinToSec * count + " mins"
+    totalMins.innerHTML = "Total " + 15 * count + " mins"
   }
   m = parseInt(timerMinToSec / 60)
   s = timerMinToSec % 60
@@ -43,14 +43,14 @@ function stop () {
 }
 
 function reset() {
-  m = parseInt(timerMinToSec / 60);
   timerMinToSec = 900;
+  m = parseInt(timerMinToSec / 60);
   s = timerMinToSec % 60;
   showTimer.innerHTML = ("0" + m).slice(-2) +"：" + ("0" + s).slice(-2);
 }
 
 function playaudio(){
-  audio.load();
+  // audio.load();
   audio.play();
 }
 

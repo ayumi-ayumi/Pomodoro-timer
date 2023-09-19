@@ -23,7 +23,15 @@ function countDown() {
     playaudio();
     timerMinToSec = 900
     recordMins.innerHTML = timerMinToSec/60 + " mins"
-    totalMins.innerHTML = "Total " + 15 * count + " mins"
+    let totalRecordMins = count * 15
+
+    if (totalRecordMins < 60) {
+      totalMins.innerHTML = "Total " + totalRecordMins + " mins"
+    } else {
+      let RecordHours = Math.floor(totalRecordMins / 60)
+      let RecordRestMins = totalRecordMins % 60 
+      totalMins.innerHTML = "Total " + RecordHours + " hours" + RecordRestMins + " mins"
+    }
   }
   m = parseInt(timerMinToSec / 60)
   s = timerMinToSec % 60
@@ -50,7 +58,6 @@ function reset() {
 }
 
 function playaudio(){
-  // audio.load();
   audio.play();
 }
 

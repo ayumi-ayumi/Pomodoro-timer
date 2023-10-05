@@ -20,7 +20,7 @@ function countDown() {
     count ++;
     times.innerHTML = count + "   *";
     stop()
-    playaudio();
+    playAudio();
     timerMinToSec = 900
     recordMins.innerHTML = timerMinToSec/60 + " mins"
     let totalRecordMins = count * 15
@@ -45,7 +45,7 @@ function start() {
 }
 
 function stop () {
-  stopaudio();
+  stopAudio();
   clearInterval(timerID);
   timerID = null;
 }
@@ -57,11 +57,11 @@ function reset() {
   showTimer.innerHTML = ("0" + m).slice(-2) +"：" + ("0" + s).slice(-2);
 }
 
-function playaudio(){
+function playAudio(){
   audio.play();
 }
 
-function stopaudio(){
+function stopAudio(){
   audio.pause();
 }
 
